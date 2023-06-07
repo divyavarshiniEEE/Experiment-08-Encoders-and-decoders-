@@ -55,42 +55,63 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
 
+ Step-1:create module encoder and decoder. Step-2:Get inputs and outputs for encoders and decoders. Step-3:perform or operation for encoders and decoders. Step-4:perform RTL LOGIC and get waveform. Step-5:End the module
 
 
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+
+ENCODER
+
+module EX7(a,b,c,d0,d1,d2d3,d4,d5,d6,d7); output a,b,c; input d0,d1,d2,d3,d4,d5,d6,d7; or(a,d4,d5,d6,d7); or(b,d2,d3,d6,d7); or(c,d1,d3,d5,d7); endmodule
+
+DECODER
+
+module EX7 (d0,d1,d2,d3,d4,d5,d6,d7,a,b,c); input a,b,c; output d0,d1,d2,d3,d4,d5,d6,d7; assign d0 = (~a&~b&~c); assign d1 = (~a&~b&c); assign d2 = (~a&b&~c); assign d3 = (~a&b&c); assign d4 = (a&~b&~c); assign d5 = (a&~b&c); assign d6 = (a&b&~c); assign d7 = (a&b&c); endmodule
+
+
+
+Developed by: DIVYAVARSHINI KS
+RegisterNumber:  212222050012
 */
-
-
-
-
 
 
 ### RTL LOGIC  
 
+ENCODER
 
+![encode rtl](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/f73e24f0-fdd7-4680-91a1-75ba35082945)
 
+DECODER
 
-
-
+![devode rtl](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/8292855b-3815-4bfc-af7d-066e2a02cda9)
 
 
 ### TIMING DIGRAMS  
 
+ENCODER
 
+![encode timing](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/01dcbb23-d1df-4186-905e-ad9e0f3bdfac)
 
+DECODER
+
+![decode timing](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/597c2977-0033-4921-b7e0-46bed5c3570b)
 
 
 ### TRUTH TABLE 
 
+ENCODER
 
+![encode truth](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/30f5a5d6-6b10-4776-8d9b-679ef11d4b2e)
 
+DECODER
 
+![decode truth](https://github.com/divyavarshiniEEE/Experiment-08-Encoders-and-decoders-/assets/128978058/e3b44101-ce3c-4563-8605-afc161d4b952)
 
 
 ### RESULTS 
+
+Thus the program to desing encoder and decoder is completed
+
